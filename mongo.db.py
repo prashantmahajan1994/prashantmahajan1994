@@ -12,3 +12,7 @@ db1=client["mongotest"]
 coll=db1['test']
 coll.insert_one(a)
 
+x="prashant"
+for i in range(len(x)):
+    print (i)
+
