@@ -1,0 +1,4 @@
+2022-07-28 13:14:21,929:Collection of data
+2022-07-28 13:14:22,454:{'_id': ObjectId('62e198e53b27c26f2f788273'), 'item': 'planner', 'qty': 75, 'size': {'h': 22.85, 'w': 30, 'uom': 'cm'}, 'status': 'D'}
+2022-07-28 13:14:22,454:{'_id': ObjectId('62e19b8370d4ef46a32895ad'), 'item': 'planner', 'qty': 75, 'size': {'h': 22.85, 'w': 30, 'uom': 'cm'}, 'status': 'D'}
+2022-07-28 13:14:22,454:{'_id': ObjectId('62e19bfef236ce35c9719662'), 'item': 'planner', 'qty': 75, 'size': {'h': 22.85, 'w': 30, 'uom': 'cm'}, 'status': 'D'}
