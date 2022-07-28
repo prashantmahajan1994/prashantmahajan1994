@@ -1,18 +1,72 @@
 import pymongo
-client = pymongo.MongoClient("mongodb+srv://pmahajan:mXqIHVJZ0p5FkM6W@cluster0.albf6.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://pmahajan:usNdn4bWjQk5d9qU@cluster0.0gfbg.mongodb.net/?retryWrites=true&w=majority")
 db = client.test
-print(db)
 
-a={
-    "name" : "prashant",
-    "email.id" : "m.prashantmahajan@gmail.com",
-    "password" : "India@2022"
-}
-db1=client["mongotest"]
-coll=db1['test']
-coll.insert_one(a)
-
-x="prashant"
-for i in range(len(x)):
-    print (i)
-
+data = [
+        {
+            "item": "canvas",
+            "qty": 100,
+            "size": {"h": 28, "w": 35.5, "uom": "cm"},
+            "status": "A",
+        },
+        {
+            "item": "journal",
+            "qty": 25,
+            "size": {"h": 14, "w": 21, "uom": "cm"},
+            "status": "A",
+        },
+        {
+            "item": "mat",
+            "qty": 85,
+            "size": {"h": 27.9, "w": 35.5, "uom": "cm"},
+            "status": "A",
+        },
+        {
+            "item": "mousepad",
+            "qty": 25,
+            "size": {"h": 19, "w": 22.85, "uom": "cm"},
+            "status": "P",
+        },
+        {
+            "item": "notebook",
+            "qty": 50,
+            "size": {"h": 8.5, "w": 11, "uom": "in"},
+            "status": "P",
+        },
+        {
+            "item": "paper",
+            "qty": 100,
+            "size": {"h": 8.5, "w": 11, "uom": "in"},
+            "status": "D",
+        },
+        {
+            "item": "planner",
+            "qty": 75,
+            "size": {"h": 22.85, "w": 30, "uom": "cm"},
+            "status": "D",
+        },
+        {
+            "item": "postcard",
+            "qty": 45,
+            "size": {"h": 10, "w": 15.25, "uom": "cm"},
+            "status": "A",
+        },
+        {
+            "item": "sketchbook",
+            "qty": 80,
+            "size": {"h": 14, "w": 21, "uom": "cm"},
+            "status": "A",
+        },
+        {
+            "item": "sketch pad",
+            "qty": 95,
+            "size": {"h": 22.85, "w": 30.5, "uom": "cm"},
+            "status": "A",
+        }
+]
+database=client['Inventory']
+collection=database['tablen01']
+collection.insert_many(data)
+ee=collection.find({"qty":'100'})
+for i in ee:
+    print(i)
